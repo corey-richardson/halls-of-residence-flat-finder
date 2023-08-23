@@ -1,0 +1,127 @@
+:root {
+    --text: #03272a;
+    --subtext: #5c8f94;
+    --background: #def9fc;
+    --primary: #c2f4fa;
+    --secondary: #95f3fd;
+    --accent: #12c9de;
+    --green: #0F0;
+    --red: #F00;
+  }
+  
+* {
+    font-family: "Lucida Grande", "Lucida Sans Unicode";
+    color: var(--text);
+    padding: 0;
+}
+  
+#base {
+    background-color: var(--background);
+    margin: 20px;
+}
+
+#main {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+  
+.container {
+    background-color: var(--primary);
+    border: solid var(--accent);
+    border-radius: 5px;
+    margin: 5px 0;
+    display: flex;
+    justify-content: space-between;
+}
+  
+.container-text {
+    margin: 20px 20px;
+    flex: 1;
+}
+
+.nav-container a {
+    width: 20%;
+    background-color: var(--primary);
+    border: solid var(--accent);
+    border-radius: 5px;
+    padding: 0 5px;
+    font-weight: bold;
+    text-align: center;
+    flex-grow: 1;
+    margin: 5px 0;
+    margin-right: 10px;
+}
+  
+.nav-container a:last-child {
+    margin-right: 0;
+}
+  
+.nav-container span {
+    display: flex;
+}
+  
+aside {
+    color: var(--subtext);
+    display: inline-block;
+    font-size: medium;
+    font-weight: bold;
+}
+  
+a {
+    text-decoration: none;
+}
+  
+a:hover {
+    text-decoration: underline;
+    color: var(--subtext);
+}
+
+input, textarea, select {
+    width: 80%;
+    background-color: var(--background);
+    border: 2px solid var(--accent);
+    border-radius: 5px;
+}
+  
+textarea {
+    height: 100px;
+    width: 80.3%;
+    box-sizing: border-box;
+    resize: vertical;
+}
+  
+p select, p input {
+    width: auto;
+    max-width: 100%;
+    padding: 0 5px;
+    overflow: hidden;
+}
+  
+footer {
+    text-align: center;
+    position: sticky;
+    bottom: 0;
+    margin-bottom: 10px;
+}
+  
+footer h5, footer p, footer a {
+    margin: 0;
+    font-size: small;
+    color: var(--subtext);
+    display: inline-block;
+}
+
+td {
+    width: 50%;
+}
+
+.centered {
+    text-align: center;
+    display: flex;
+    justify-content: center; /* Horizontally center */
+    align-items: center;     /* Vertically center */
+    height: 30vh;  
+}
+

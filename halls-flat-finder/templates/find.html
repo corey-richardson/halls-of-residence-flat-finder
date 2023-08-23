@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+{% block content %}
+
+<div class="container">
+    <div class="container-text">
+        <form method="post">
+            <table style="width: 100%; margin: 10px 0;">
+                {{ find_users.hidden_tag() }}
+                {% for field in find_users %}
+                    {% if field.type != "CSRFTokenField" %}
+                    <tr>
+                        <td style="width: 30%;">{{field.label.text}}</td>
+                        <td style="width: 70%;">{{field(autocomplete="off")}}</td>
+                    </tr>
+                    {% endif %}
+                {% endfor %}
+            </table> 
+            <aside>All fields are required.</aside> 
+        </form>
+    </div>
+</div>
+
+{% endblock %}

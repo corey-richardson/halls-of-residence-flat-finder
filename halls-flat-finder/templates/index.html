@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+{% block content %}
+
+<a href="/add">
+    <div class="container">
+        <div class="centered container-text">
+            <span>
+                <h1>Add me to the list...</h1>
+                <aside>This is for users who have not yet registered themselves.</aside>
+            </span>
+        </div>
+    </div>
+</a>
+
+<a href="/find">
+    <div class="container">
+        <div class="centered container-text">
+            <span>
+                <h1>I have already added myself to the list...</h1>
+                <aside>This is for users who have already registered themselves.</aside>
+            </span>
+        </div>
+    </div>
+</a>
+
+{% endblock %}

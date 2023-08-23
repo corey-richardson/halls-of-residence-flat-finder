@@ -1,0 +1,124 @@
+{% extends "base.html" %}
+{% block content %}
+
+<style>
+    th {
+        font-weight: bold;
+    }
+    
+    table, th, td, tr {
+        border: 1px solid black;
+        border-collapse: collapse;
+      }
+    
+    table {
+        width: 100%;
+    }
+    
+    th, td {
+        width: 20%;
+        text-align: center;
+    }
+    
+    tr:nth-child(even) {
+        background-color: #def9fc;
+    }
+</style>
+
+<div class="container">
+    <div class="container-text">
+        <h2>Other students in your flat:</h2>
+        <table>
+
+            <tr>
+                <th>Name</th>
+                <th>Course</th>
+                <th>Instagram</th>
+                <th>Snapchat</th>
+                <th>Room Number</th>
+            </tr>
+
+            {% for user in same_flat %}
+                <tr>
+                    <td>{{user["name"]}}</td>
+                    <td>{{user["course"]}}</td>
+                    <td>{{user["ig"]}}</td>
+                    <td>{{user["sc"]}}</td>
+                    <td>{{user["block"]}}{{user["flat"]}}{{user["room"]}}</td>
+                </tr>
+            {% endfor %}
+
+        </table>
+    </div>
+</div>
+
+<div class="container">
+    <div class="container-text">
+        <h2>Other students in your block:</h2>
+        <table>
+
+            <tr>
+                <th>Name</th>
+                <th>Course</th>
+                <th>Instagram</th>
+                <th>Snapchat</th>
+                <th>Room Number</th>
+            </tr>
+
+            {% for user in same_block %}
+                <tr>
+                    <td>{{user["name"]}}</td>
+                    <td>{{user["course"]}}</td>
+                    <td>{{user["ig"]}}</td>
+                    <td>{{user["sc"]}}</td>
+                    <td>{{user["block"]}}-{{user["flat"]}}-{{user["room"]}}</td>
+                </tr>
+            {% endfor %}
+
+        </table>
+    </div>
+</div>
+
+<div class="container">
+    <div class="container-text">
+        <h2>Add a link to a group chat for this flat: </h2>
+        <form method="post">
+            <table style="width: 100%; margin: 10px 0;">
+                {{ add_group.hidden_tag() }}
+                {% for field in add_group %}
+                    {% if field.type != "CSRFTokenField" %}
+                    <tr>
+                        <td style="width: 30%;">{{field.label.text}}</td>
+                        <td style="width: 70%;">{{field(autocomplete="off")}}</td>
+                    </tr>
+                    {% endif %}
+                {% endfor %}
+            </table>  
+        </form>
+    </div>
+</div>
+
+<div class="container">
+    <div class="container-text">
+        <h2>Group chats for this block or flat: </h2>
+        <table>
+            <tr>
+                <th>Hall</th>
+                <th>Block</th>
+                <th>Flat</th>
+            </tr>
+
+            {% for chat in chats %}
+                <tr>
+                    <td>{{user["name"]}}</td>
+                    <td>{{user["course"]}}</td>
+                    <td>{{user["ig"]}}</td>
+
+                </tr>
+            {% endfor %}
+
+        </table>
+    </div>
+</div>
+
+{% endblock %}
