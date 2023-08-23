@@ -33,6 +33,7 @@ class AddUser(FlaskForm):
     hall = SelectField(
         "*Your Halls: ",
         choices = halls_list,
+        default="Radnor",
     )
     
     block = SelectField(
@@ -61,6 +62,7 @@ class FindUsers(FlaskForm):
     hall = SelectField(
         "Your Halls: ",
         choices = halls_list,
+        default="Radnor",
     )
     
     block = SelectField(
