@@ -2,22 +2,31 @@ from flask import Flask, render_template, redirect, url_for, session
 from forms import (AddUser, FindUsers)
 import json
 
+import os
+here = os.path.dirname(__file__)
 FILE_PATH = "users.json"
+FILE_PATH = os.path.join(here, FILE_PATH)
 
 app = Flask(__name__)
 app.config['SECRET_KEY'] = 'mysecret'
 
-def get_all(courses, condition, status):
+def get_all(items, condition, status):
     temp = []
-    for course in courses:
-        if course[condition] == status:
-            temp.append(course)
+    for item in items:
+        if item[condition] == status:
+            temp.append(item)
     return temp
 
 @app.route('/', methods=["GET","POST"])
 def index():
+    
+    with open(FILE_PATH, "r") as user_file:
+        users = json.load(user_file)["users"]
+    count = len(users)
+    
     return render_template(
-        "index.html"
+        "index.html",
+        count = count,
     )
 
 @app.route('/add', methods=["GET","POST"])

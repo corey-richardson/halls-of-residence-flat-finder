@@ -71,49 +71,7 @@
                     <td>{{user["course"]}}</td>
                     <td>{{user["ig"]}}</td>
                     <td>{{user["sc"]}}</td>
-                    <td>{{user["block"]}}-{{user["flat"]}}-{{user["room"]}}</td>
-                </tr>
-            {% endfor %}
-
-        </table>
-    </div>
-</div>
-
-<div class="container">
-    <div class="container-text">
-        <h2>Add a link to a group chat for this flat: </h2>
-        <form method="post">
-            <table style="width: 100%; margin: 10px 0;">
-                {{ add_group.hidden_tag() }}
-                {% for field in add_group %}
-                    {% if field.type != "CSRFTokenField" %}
-                    <tr>
-                        <td style="width: 30%;">{{field.label.text}}</td>
-                        <td style="width: 70%;">{{field(autocomplete="off")}}</td>
-                    </tr>
-                    {% endif %}
-                {% endfor %}
-            </table>  
-        </form>
-    </div>
-</div>
-
-<div class="container">
-    <div class="container-text">
-        <h2>Group chats for this block or flat: </h2>
-        <table>
-            <tr>
-                <th>Hall</th>
-                <th>Block</th>
-                <th>Flat</th>
-            </tr>
-
-            {% for chat in chats %}
-                <tr>
-                    <td>{{user["name"]}}</td>
-                    <td>{{user["course"]}}</td>
-                    <td>{{user["ig"]}}</td>
-
+                    <td>{{user["block"]}}{{user["flat"]}}{{user["room"]}}</td>
                 </tr>
             {% endfor %}
 

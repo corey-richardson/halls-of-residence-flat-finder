@@ -9,6 +9,16 @@
             "block": "0",
             "flat": "1",
             "room": "1"
+        },
+        {
+            "name": "TEST",
+            "course": "TEST",
+            "ig": "",
+            "sc": "",
+            "hall": "Radnor",
+            "block": "0",
+            "flat": "1",
+            "room": "1"
         }
     ]
 }
