@@ -16,4 +16,4 @@ tests/test_forms.py::test_FindUsers_hall_invalid PASSED                  [100%]
     from flask import Markup
 
 -- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
-======================== 7 passed, 2 warnings in 1.04s =========================
+======================== 7 passed, 2 warnings in 1.36s =========================

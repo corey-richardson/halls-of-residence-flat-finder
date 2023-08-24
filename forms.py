@@ -15,6 +15,7 @@ halls_list = sorted([
     "Pilgrim",
     "Robbins",
     "Saltwater",
+    "Beckley Point",
     ])
 
 class AddUser(FlaskForm):
