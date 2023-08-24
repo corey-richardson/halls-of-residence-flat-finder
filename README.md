@@ -11,7 +11,7 @@ A Flask web application that can be used to help new students find their Halls o
 
 # Software Installation Guide
 
-This guide will walk you through the steps to set up and run the "Course Progress Tracker" project on your local machine.
+This guide will walk you through the steps to set up and run the "Halls Flatmate Finder" project on your local machine.
 
 ## Prerequisites
 Before you begin, ensure that you have the following installed on your system:
@@ -73,7 +73,7 @@ flask run
 ```
 > By default, the application should start on [127.0.0.1:5000/](http://127.0.0.1:5000/) in your web browser.
 
-3. Open your web browser and navigate to [127.0.0.1:5000/](http://127.0.0.1:5000/). You should see the "Course Progress Tracker" application running.
+3. Open your web browser and navigate to [127.0.0.1:5000/](http://127.0.0.1:5000/). You should see the "Halls Flatmate Finder" application running.
 
 ## Step 4: Stopping the Application
 
